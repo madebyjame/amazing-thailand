@@ -11,6 +11,7 @@
   let closing = false;
   let panelAnimation = null;
   let transitionId = 0;
+  let rendering = false;
 
   function slidePanel(opening) {
     const from = getComputedStyle(panel).transform;
@@ -31,6 +32,7 @@
   const placeButtons = (p, selected) => `<div class="reading-places" role="group" aria-label="เลือกอ่านสถานที่เพิ่มเติม">${p.attractions.map((place, n) => `<button type="button" data-detail-place="${n}" aria-pressed="${n === selected}"><span>${pad(n + 1)}</span>${escapeHTML(shortName(place.name))}<span aria-hidden="true">↗</span></button>`).join('')}</div>`;
 
   function render(p, type, placeIndex = 0) {
+    rendering = true;
     const guide = window.THAILAND_GUIDES[p.key];
     activeProvince = p;
     activePlace = Math.max(0, Math.min(p.attractions.length - 1, placeIndex));
@@ -50,6 +52,7 @@
     }
     content.innerHTML = `<figure class="reading-photo">${image(images[type], '', true, type === 'places' ? place.name : undefined)}<span>${escapeHTML(p.region)} · ${escapeHTML(p.tripDays)}</span></figure><div class="reading-content"><header class="reading-header"><p class="reading-kicker">${escapeHTML(labels[type])} / ${escapeHTML(p.theme.short)}</p><h2 id="travel-title" tabindex="-1">${escapeHTML(titles[type])}</h2><p class="reading-lead">${escapeHTML(leads[type])}</p></header><nav class="reading-nav" aria-label="หัวข้ออ่านเพิ่มเติม">${Object.entries(labels).map(([key, label]) => `<button type="button" data-detail-tab="${key}" aria-pressed="${type === key}">${label}</button>`).join('')}</nav><article class="reading-article">${story}</article><button type="button" class="reading-done" data-close-reading>กลับไปเที่ยวต่อ <span aria-hidden="true">↙</span></button></div>`;
     content.scrollTo({ top: 0, behavior: 'instant' });
+    queueMicrotask(() => { rendering = false; });
   }
 
   async function openReading(button) {
@@ -69,7 +72,7 @@
     panel.dataset.state = 'opening';
     button.setAttribute('aria-expanded', 'true');
     document.body.classList.add('reading-open');
-    closeButton.focus({ preventScroll: true });
+    content.querySelector('#travel-title').focus({ preventScroll: true });
     await slidePanel(true);
     if (ticket === transitionId) panel.dataset.state = 'open';
   }
@@ -95,13 +98,15 @@
   document.addEventListener('click', event => {
     const button = event.target.closest('[data-read-more]');
     if (button) { openReading(button); return; }
-    if (!panel.hidden && !panel.contains(event.target)) closeReading(false);
+    // Switching topics replaces the clicked node; retain the original event path.
+    if (!panel.hidden && !event.composedPath().includes(panel)) closeReading(false);
   });
   closeButton.addEventListener('click', () => closeReading());
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !panel.hidden) { event.preventDefault(); closeReading(); }
   });
   panel.addEventListener('focusout', event => {
+    if (rendering || closing) return;
     if (event.relatedTarget && !panel.contains(event.relatedTarget) && !event.relatedTarget.closest('[data-read-more]')) closeReading(false);
   });
   reduceMotion.addEventListener('change', event => {

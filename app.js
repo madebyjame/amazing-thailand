@@ -49,7 +49,7 @@ function shell(p, provinceIndex, chapter, body, options = {}) {
     <header class="slide-header flex items-center justify-between gap-4"><span>${p.region} · ${p.theme.short}</span></header>
     ${tabs(p, chapter)}
     <div class="slide-body ${options.bodyClass || ''}">${body}</div>
-    <footer class="slide-footer flex items-center justify-between gap-4"><button class="read-more" type="button" data-read-more="${p.key}" data-detail-type="${chapterIds[chapter]}" aria-expanded="false" aria-controls="travel-details"><span>อ่านเพิ่มเติม</span><span aria-hidden="true">↗</span></button>${controls(index)}</footer>
+    <footer class="slide-footer flex items-center justify-between gap-4"><button class="read-more" type="button" data-read-more="${p.key}" data-detail-type="${chapterIds[chapter]}" aria-expanded="false" aria-controls="travel-details"><span>อ่านเพิ่มเติม</span><span aria-hidden="true">←</span></button>${controls(index)}</footer>
   </section>`;
 }
 
