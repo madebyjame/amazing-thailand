@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263e34">
+  <meta name="description" content="หาวันหยุดที่ใช่กับ THAI ESCAPE — 6 ภาค 6 จังหวัด ทั้งที่เที่ยว อาหาร ย่านพัก และไอเดียทริปในแบบของคุณ">
+  <title>THAI ESCAPE — Amazing Thailand · 6 ภาค 6 จังหวัด</title>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="preload" as="image" href="assets/images/kanchanaburi-stay.jpg">
+  <link rel="stylesheet" href="assets/tailwind.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="experience.css">
+  <link rel="icon" href="assets/thai-mark.svg" type="image/svg+xml">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="immersive">
+  <a class="skip-link" href="#journey">ข้ามไปยังเนื้อหา</a>
+  <div class="nav-launcher" aria-label="เมนูหลัก">
+    <a href="#intro" aria-label="THAI ESCAPE หน้าแรก"><img src="assets/thai-mark.svg" width="30" height="30" alt=""></a>
+    <button id="desktop-menu-toggle" type="button" aria-expanded="false" aria-controls="province-panel" aria-label="เปิดเมนูจังหวัด"><span class="menu-icon" aria-hidden="true"></span><span class="launcher-label">จุดหมาย</span></button>
+  </div>
+  <aside class="sidebar" id="province-panel" aria-label="เมนูจังหวัด" inert>
+    <button id="close-menu" class="close-menu" type="button" aria-label="ปิดเมนูจังหวัด">×</button>
+    <a class="brand flex flex-col items-start" href="#intro" aria-label="THAI ESCAPE หน้าแรก">
+      <img src="assets/thai-mark.svg" width="30" height="30" alt="" class="brand-mark">
+      <span class="brand-name">THAI<br>ESCAPE</span>
+      <span class="brand-sub">AMAZING THAILAND</span>
+    </a>
+    <span class="sidebar-rule" aria-hidden="true"></span>
+    <p class="nav-label">เลือกจุดหมาย</p>
+    <nav id="province-nav" class="province-nav flex flex-col" aria-label="6 จังหวัด 6 ภาค"></nav>
+    <div class="sidebar-footer">
+      <span class="sidebar-rule" aria-hidden="true"></span>
+      <p id="chapter-status">6 จังหวัด / 24 เรื่องราว</p>
+      <div class="chapter-progress grid grid-cols-4 gap-1.5" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </aside>
+  <header class="mobile-bar">
+    <a href="#intro">THAI ESCAPE<span>AMAZING THAILAND</span></a>
+    <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="province-panel" aria-label="เปิดเมนูจังหวัด">จุดหมาย <span aria-hidden="true">☰</span></button>
+  </header>
+  <main id="journey" tabindex="-1" aria-label="วันหยุด 6 ภาค 6 จังหวัด"></main>
+  <noscript><div class="no-script">กรุณาเปิด JavaScript เพื่อชมทั้ง 6 จังหวัดและแกลเลอรีสถานที่ท่องเที่ยว</div></noscript>
+  <p id="live-status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+</body>
+</html>
