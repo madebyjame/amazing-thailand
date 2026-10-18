@@ -18,13 +18,15 @@ const desktop = matchMedia('(min-width: 1100px) and (min-height: 700px)');
 const external = (url, label, className = '') => `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer" class="${className}">${escapeHTML(label)}</a>`;
 const mapURL = query => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 const photo = key => photos[key];
+const photoSizes = '(max-width: 1023px) 100vw, 1200px';
+const photoSources = p => [...(p.responsive || []), { src: p.src, width: p.width }].map(source => `${source.src} ${source.width}w`).join(', ');
 // Figma keeps Thai phrases separated by spaces together. Preserve those runs on
 // the reference desktop canvas while allowing normal Thai wrapping on mobile.
 const editorialText = value => String(value).split(/\s+/).map(run => `<span class="text-run">${escapeHTML(run)}</span>`).join(' ');
 
 function image(key, className = '', eager = false, alt) {
   const p = photo(key);
-  return `<img src="${p.src}" alt="${escapeHTML(alt || p.label)}" width="${p.width}" height="${p.height}" loading="${eager ? 'eager' : 'lazy'}" decoding="async" ${eager ? 'fetchpriority="high"' : ''} class="${className}">`;
+  return `<img src="${p.src}" srcset="${photoSources(p)}" sizes="${photoSizes}" alt="${escapeHTML(alt || p.label)}" width="${p.width}" height="${p.height}" loading="${eager ? 'eager' : 'lazy'}" decoding="async" ${eager ? 'fetchpriority="high"' : ''} class="${className}">`;
 }
 
 function controls(index) {
@@ -47,7 +49,7 @@ function shell(p, provinceIndex, chapter, body, options = {}) {
     <header class="slide-header flex items-center justify-between gap-4"><span>${p.region} · ${p.theme.short}</span></header>
     ${tabs(p, chapter)}
     <div class="slide-body ${options.bodyClass || ''}">${body}</div>
-    <footer class="slide-footer flex items-center justify-between gap-4">${controls(index)}</footer>
+    <footer class="slide-footer flex items-center justify-between gap-4"><button class="read-more" type="button" data-read-more="${p.key}" data-detail-type="${chapterIds[chapter]}" aria-expanded="false" aria-controls="travel-details"><span>อ่านเพิ่มเติม</span><span aria-hidden="true">↗</span></button>${controls(index)}</footer>
   </section>`;
 }
 
@@ -58,7 +60,7 @@ function hero() {
     <header class="slide-header flex items-center justify-between gap-4"><span>AMAZING THAILAND</span></header>
     <div class="slide-body hero-body"><div class="hero-story flex flex-col items-start">
       <p class="eyebrow">6 ภาค · 6 จังหวัด</p>
-      <h1 id="hero-title">วันหยุดนี้<br>เมืองไทยมีเรื่องให้เล่า</h1>
+      <h1 id="hero-title"><span class="hero-line"><span>วันหยุดนี้</span></span><span class="hero-line"><span>เมืองไทยมีเรื่องให้เล่า</span></span></h1>
       <p class="hero-description">หาทริปที่ใช่ ในวันหยุดของคุณ</p>
       <div class="hero-actions flex flex-wrap gap-4"><a href="#holiday" class="button button-light">หาวันหยุดที่ใช่ ↗</a><a href="#chiang-mai-overview" class="button button-outline">สำรวจ 6 จังหวัด ↓</a></div>
     </div></div>
@@ -149,6 +151,20 @@ let pendingFocus = false;
 let wheelSum = 0;
 let lastWheelTime = 0;
 let scrollFrame = null;
+let navigationTransition = null;
+let imageWarmupTimer;
+
+function warmNearbyImages(index) {
+  clearTimeout(imageWarmupTimer);
+  imageWarmupTimer = setTimeout(() => {
+    [slides[index], slides[index + 1]].filter(Boolean).forEach(slide => {
+      $$('img[loading="lazy"]', slide).forEach(img => {
+        img.loading = 'eager';
+        img.decode?.().catch(() => {});
+      });
+    });
+  }, 80);
+}
 
 function sync(index, updateHash = true) {
   if (pendingTarget !== null && index !== pendingTarget) return;
@@ -166,6 +182,7 @@ function sync(index, updateHash = true) {
   $$('.chapter-progress i').forEach((bar, n) => bar.classList.toggle('is-active', chapter === n));
   $('#live-status').textContent = p >= 0 ? `${provinces[p].name} · ${chapters[chapter]} · ${index + 1} จาก ${totalSlides}` : index === 0 ? 'เริ่มต้นวันหยุด' : slide.id === 'next-journey' ? 'จบทริป · เลือกจุดหมายสำหรับวันหยุดหน้า' : 'เลือกวันหยุดในแบบของคุณ';
   if (updateHash && location.hash !== `#${slide.id}`) history.replaceState(null, '', `#${slide.id}`);
+  warmNearbyImages(index);
 }
 
 function finishNavigation() {
@@ -184,15 +201,25 @@ function finishNavigation() {
 
 function goTo(index, immediate = false, focus = false) {
   const target = Math.max(0, Math.min(slides.length - 1, index));
+  const distant = Math.abs(target - current) > 1;
   pendingTarget = target;
   pendingFocus = focus;
   clearTimeout(pendingTimer);
-  const instant = immediate || reduceMotion.matches || Math.abs(target - current) > 1;
+  const instant = immediate || reduceMotion.matches || distant;
   lockedUntil = performance.now() + (instant ? 150 : 850);
-  sync(target);
-  const top = slides[target].offsetTop;
-  window.scrollTo({ top, behavior: instant ? 'instant' : 'smooth' });
-  pendingTimer = setTimeout(finishNavigation, instant ? 60 : 900);
+  const move = () => {
+    if (pendingTarget !== target) return;
+    sync(target);
+    window.scrollTo({ top: slides[target].offsetTop, behavior: instant ? 'instant' : 'smooth' });
+    pendingTimer = setTimeout(finishNavigation, instant ? 60 : 900);
+  };
+  navigationTransition?.skipTransition();
+  navigationTransition = null;
+  if (distant && !immediate && !reduceMotion.matches && document.startViewTransition) {
+    navigationTransition = document.startViewTransition(move);
+    navigationTransition.finished.catch(() => {});
+    lockedUntil = performance.now() + 500;
+  } else move();
   closeMenu();
 }
 
@@ -235,17 +262,29 @@ $$('[data-gallery]').forEach(gallery => {
     $$('[data-place]', gallery).forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.place) === next)));
     const img = $('.gallery-image', gallery);
     const asset = photo(p.galleryPhotos[next]);
-    const preload = new Image(); preload.src = asset.src;
+    const preload = new Image(); preload.sizes = photoSizes; preload.srcset = photoSources(asset); preload.src = asset.src;
     try { await preload.decode(); } catch { /* The image element reports any final network error. */ }
     if (id !== requestId) return;
-    if (!reduceMotion.matches && img.animate) img.animate([{ opacity: 0.3, transform: 'scale(1.025)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 380, easing: 'ease-out' });
-    img.src = asset.src; img.alt = p.attractions[next].name; img.width = asset.width; img.height = asset.height;
-    $('.gallery-caption', gallery).innerHTML = galleryCaption(p, next);
+    $$('.gallery-previous', gallery).forEach(previous => previous.remove());
+    if (!reduceMotion.matches && img.animate) {
+      const previous = img.cloneNode();
+      previous.className = 'gallery-previous';
+      previous.alt = '';
+      previous.setAttribute('aria-hidden', 'true');
+      img.after(previous);
+      const fade = previous.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 520, easing: 'cubic-bezier(.22,1,.36,1)' });
+      fade.finished.catch(() => {}).finally(() => previous.remove());
+      img.animate([{ transform: 'scale(1.035)' }, { transform: 'scale(1)' }], { duration: 700, easing: 'cubic-bezier(.22,1,.36,1)' });
+    }
+    img.srcset = photoSources(asset); img.src = asset.src; img.alt = p.attractions[next].name; img.width = asset.width; img.height = asset.height;
+    const caption = $('.gallery-caption', gallery);
+    caption.innerHTML = galleryCaption(p, next);
+    if (!reduceMotion.matches) [...caption.children].forEach((node, n) => node.animate([{ opacity: .2, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 420, delay: n * 50, easing: 'cubic-bezier(.22,1,.36,1)' }));
   });
 });
 
 addEventListener('wheel', event => {
-  if (!desktop.matches || document.body.classList.contains('menu-open') || event.ctrlKey || event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+  if (!desktop.matches || document.body.classList.contains('reading-open') || document.body.classList.contains('menu-open') || event.ctrlKey || event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
   if (event.target.closest('.sidebar, .chapter-tabs, [data-native-scroll]')) return;
   const slide = slides[current];
   if (slide.scrollHeight > innerHeight + 5) return;
@@ -260,7 +299,7 @@ addEventListener('wheel', event => {
 }, { passive: false });
 
 addEventListener('keydown', event => {
-  if (event.target.closest('a, button, input, select, textarea, [contenteditable]')) return;
+  if (document.body.classList.contains('reading-open') || event.target.closest('a, button, input, select, textarea, summary, [contenteditable]')) return;
   if (!['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) return;
   if (!desktop.matches && !['Home', 'End'].includes(event.key)) return;
   event.preventDefault();

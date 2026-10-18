@@ -1,3 +1,16 @@
+/* One cool palette across the journey, with navy and deep-green variations. */
+:root {
+  --bg: #0A202D;
+  --ink: #EDF7FB;
+  --accent: #9EDAD5;
+  --muted: #BDD1DC;
+  --active-accent: #9EDAD5;
+  --gold: #9EDAD5;
+  color: var(--ink);
+  background: var(--bg);
+  color-scheme: dark;
+}
+::selection { background: #A5DEDF; color: #0A2636; }
 /* Image-led refinement: a click-to-open navigation and readable frosted panels. */
 body.immersive .text-run { display: inline; }
 body.immersive .slide-header { font-size: 14px; line-height: 24px; color: var(--ink); }
@@ -10,7 +23,7 @@ body.immersive .slide-controls button { width: 44px; height: 44px; }
 body.immersive .hero h1 { text-shadow: 0 3px 22px rgba(0, 0, 0, .28); }
 body.immersive .hero-description { font-size: 19px; line-height: 30px; color: #fff; }
 body.immersive .button-outline {
-  background: rgba(14, 32, 26, .58);
+  background: rgba(9, 29, 41, .58);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-color: rgba(255, 255, 255, .45);
@@ -22,15 +35,15 @@ body.immersive .cinematic .slide-header > span {
   padding: 5px 12px;
   border: 1px solid rgba(255, 255, 255, .2);
   border-radius: 20px;
-  background: rgba(12, 28, 23, .72);
+  background: rgba(9, 28, 40, .72);
   color: #fff;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 body.immersive .cinematic .chapter-tabs a { color: #fff; }
-body.immersive .cinematic .chapter-tabs a[aria-current] { color: #142c23; }
+body.immersive .cinematic .chapter-tabs a[aria-current] { color: #0c2938; }
 body.immersive .cinematic .chapter-tabs {
-  background: rgba(12, 28, 23, .79);
+  background: rgba(9, 28, 40, .79);
   border-color: rgba(255, 255, 255, .22);
   border-radius: 28px;
   backdrop-filter: blur(16px);
@@ -45,7 +58,7 @@ body.immersive .mood-card figcaption {
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, .24);
   border-radius: 16px;
-  background: rgba(12, 28, 23, .77);
+  background: rgba(9, 28, 40, .77);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -105,7 +118,7 @@ body.immersive .editorial-photo figcaption {
   padding: 7px 12px;
   font-size: 12px;
   border-radius: 16px;
-  background: rgba(12, 28, 23, .8);
+  background: rgba(9, 28, 40, .8);
   color: #fff;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -124,8 +137,8 @@ body.immersive.on-cinematic .sidebar {
   gap: 22px;
   border: 1px solid rgba(255, 255, 255, .24);
   border-radius: 24px;
-  background: rgba(15, 37, 29, .91);
-  color: #e5eee7;
+  background: rgba(8, 28, 40, .91);
+  color: #edf7fb;
   box-shadow: 0 24px 80px rgba(0, 0, 0, .22);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -144,8 +157,8 @@ body.immersive .sidebar .brand { display: flex; }
 body.immersive .sidebar > .sidebar-rule { display: block; }
 body.immersive .province-link { width: 100%; height: 60px; padding: 10px 12px; }
 body.immersive .nav-place > span { font-size: 17px; line-height: 26px; }
-body.immersive .nav-place small { font-size: 12px; line-height: 20px; color: #c5d3c9; }
-body.immersive .nav-number { font-size: 13px; color: #d5ded5; }
+body.immersive .nav-place small { font-size: 12px; line-height: 20px; color: #b9d3de; }
+body.immersive .nav-number { font-size: 13px; color: #d0e3e9; }
 body.immersive .nav-label { font-size: 13px; line-height: 20px; }
 body.immersive .sidebar-footer { font-size: 12px; line-height: 20px; }
 .close-menu {
@@ -172,7 +185,7 @@ body.immersive .sidebar-footer { font-size: 12px; line-height: 20px; }
   padding: 18px 10px 12px;
   border: 1px solid rgba(255, 255, 255, .25);
   border-radius: 24px;
-  background: rgba(14, 33, 27, .84);
+  background: rgba(8, 26, 38, .84);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   color: #fff;
@@ -224,7 +237,7 @@ body.menu-open .nav-launcher { opacity: 0; pointer-events: none; }
   }
   body.immersive .chapter-tabs a,
   body.immersive .chapter-tabs a[aria-current] { width: auto; min-width: 122px; height: 34px; font-size: 15px; padding: 0 16px; border: 0; }
-  body.immersive .cinematic .chapter-tabs { background: rgba(12, 28, 23, .79); border-color: rgba(255, 255, 255, .22); }
+  body.immersive .cinematic .chapter-tabs { background: rgba(9, 28, 40, .79); border-color: rgba(255, 255, 255, .22); }
   body.immersive .province-slide.cinematic .overview-story {
     position: absolute;
     top: auto;
@@ -236,7 +249,7 @@ body.menu-open .nav-launcher { opacity: 0; pointer-events: none; }
     gap: 12px;
     border: 1px solid rgba(255, 255, 255, .23);
     border-radius: 22px;
-    background: rgba(12, 28, 23, .72);
+    background: rgba(9, 28, 40, .72);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
@@ -245,8 +258,8 @@ body.menu-open .nav-launcher { opacity: 0; pointer-events: none; }
   body.immersive .krabi .overview-story h2 { font-size: 108px; line-height: 1.1; }
   body.immersive .province-hook { font-size: 25px; line-height: 38px; width: 100%; max-width: 100%; color: #fff; }
   body.immersive .cinematic .province-overview { width: 100%; max-width: 100%; font-size: 17px; line-height: 29px; color: #fff; }
-  body.immersive .cinematic-background::after { background: linear-gradient(0deg, rgba(4, 17, 11, .24), transparent 65%); }
-  body.immersive .krabi .cinematic-background::after { background: linear-gradient(0deg, rgba(4, 17, 11, .24), transparent 65%); }
+  body.immersive .cinematic-background::after { background: linear-gradient(0deg, rgba(7, 22, 33, .24), transparent 65%); }
+  body.immersive .krabi .cinematic-background::after { background: linear-gradient(0deg, rgba(7, 22, 33, .24), transparent 65%); }
 
   body.immersive .gallery { display: block; height: 100%; min-height: 0; }
   body.immersive .gallery .gallery-photo { height: 100%; }
@@ -258,7 +271,7 @@ body.menu-open .nav-launcher { opacity: 0; pointer-events: none; }
     min-height: 0;
     border: 1px solid rgba(255, 255, 255, .24);
     border-radius: 16px;
-    background: rgba(12, 28, 23, .81);
+    background: rgba(9, 28, 40, .81);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
   }
@@ -400,7 +413,7 @@ body.menu-open .nav-launcher { opacity: 0; pointer-events: none; }
     gap: 14px;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background: rgba(12, 28, 23, .8);
+    background: rgba(9, 28, 40, .8);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
@@ -410,7 +423,7 @@ body.menu-open .nav-launcher { opacity: 0; pointer-events: none; }
   body.immersive .gallery-photo,
   body.immersive .gallery-overlay .gallery-photo,
   body.immersive .gallery-coast .gallery-photo { height: 530px; }
-  body.immersive .gallery-caption { min-height: 0; background: rgba(12, 28, 23, .88); padding: 18px; }
+  body.immersive .gallery-caption { min-height: 0; background: rgba(9, 28, 40, .88); padding: 18px; }
   body.immersive .gallery-title-row h3 { font-size: 23px; line-height: 34px; }
   body.immersive .gallery-description { font-size: 15px; line-height: 25px; }
   body.immersive .gallery-selectors button,
@@ -438,11 +451,11 @@ body.menu-open .nav-launcher { opacity: 0; pointer-events: none; }
 
 /* A final chapter gives the journey a destination beyond the last province. */
 body.immersive .slide.finale {
-  --bg: #17352f;
-  --ink: #f7f8f2;
-  --accent: #e2c797;
+  --bg: #0b2633;
+  --ink: #edf7fb;
+  --accent: #9fded9;
   grid-template-rows: auto minmax(0, 1fr) auto;
-  background: #17352f;
+  background: #0b2633;
 }
 .finale-background { position: absolute; inset: 0; z-index: -2; }
 .finale-background img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; }
@@ -450,13 +463,13 @@ body.immersive .slide.finale {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(7, 27, 24, .9), rgba(7, 27, 24, .56) 60%, rgba(7, 27, 24, .22)), linear-gradient(0deg, rgba(7, 27, 24, .88), transparent 55%);
+  background: linear-gradient(90deg, rgba(6, 23, 35, .9), rgba(6, 23, 35, .56) 60%, rgba(6, 23, 35, .22)), linear-gradient(0deg, rgba(6, 23, 35, .88), transparent 55%);
 }
 .finale-body { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(340px, .9fr); align-items: center; gap: clamp(32px, 4vw, 64px); }
 .finale-story { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
-body.immersive .finale-story .eyebrow { font-size: 16px; line-height: 26px; color: #e2c797; }
+body.immersive .finale-story .eyebrow { font-size: 16px; line-height: 26px; color: #9fded9; }
 .finale-story h2 { font-size: clamp(48px, 4.8vw, 74px); line-height: 1.4; font-weight: 500; text-shadow: 0 4px 24px rgba(0, 0, 0, .25); }
-.finale-story h2 span { color: #e2c797; }
+.finale-story h2 span { color: #9fded9; }
 .finale-description { max-width: 420px; font-size: 18px; line-height: 30px; color: #fff; }
 .finale-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 8px; }
 .finale-actions .button { border-radius: 28px; }
@@ -475,15 +488,15 @@ body.immersive .finale-story .eyebrow { font-size: 16px; line-height: 26px; colo
 }
 .finale-destinations a { display: flex; align-items: center; gap: 12px; padding: 22px 12px; min-height: 112px; border-radius: 14px; transition: background .2s; }
 .finale-destinations a:hover { background: rgba(255, 255, 255, .12); }
-.finale-number { align-self: flex-start; margin-top: 5px; color: #e2c797; font-size: 11px; line-height: 20px; }
+.finale-number { align-self: flex-start; margin-top: 5px; color: #9fded9; font-size: 11px; line-height: 20px; }
 .finale-destinations a > span:nth-child(2) { min-width: 0; }
-.finale-destinations small { display: block; font-size: 12px; line-height: 21px; color: #d0ddd4; }
+.finale-destinations small { display: block; font-size: 12px; line-height: 21px; color: #c1d5df; }
 .finale-destinations strong { display: block; font-size: clamp(19px, 1.6vw, 24px); line-height: 34px; font-weight: 500; }
-.finale-arrow { margin-left: auto; font-size: 18px; color: #e2c797; }
+.finale-arrow { margin-left: auto; font-size: 18px; color: #9fded9; }
 body.immersive .finale-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid rgba(255, 255, 255, .24); padding-top: 20px; }
 .finale-footer-info { display: flex; align-items: center; flex-wrap: wrap; column-gap: 22px; row-gap: 8px; }
 .finale-signature { font-family: Manrope, sans-serif; font-size: 16px; font-weight: 600; line-height: 26px; }
-.finale-tagline { font-size: 12px; line-height: 22px; color: #d0ddd4; }
+.finale-tagline { font-size: 12px; line-height: 22px; color: #c1d5df; }
 @media (min-width: 1024px) and (max-width: 1199px) {
   .finale-destinations { padding: 10px; }
   .finale-destinations a { gap: 8px; padding: 18px 8px; }
@@ -493,7 +506,7 @@ body.immersive .finale-footer { display: flex; align-items: center; justify-cont
 @media (max-width: 1023px) {
   body.immersive .slide.finale { min-height: 100svh; height: auto; gap: 36px; padding-top: 104px; }
   .finale-background img { object-position: 70% center; }
-  .finale-background::after { background: linear-gradient(0deg, rgba(7, 27, 24, .97), rgba(7, 27, 24, .75) 60%, rgba(7, 27, 24, .58)); }
+  .finale-background::after { background: linear-gradient(0deg, rgba(6, 23, 35, .97), rgba(6, 23, 35, .75) 60%, rgba(6, 23, 35, .58)); }
   .finale-body { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 26px; }
   .finale-story { gap: 18px; }
   .finale-story h2 { font-size: clamp(40px, 8vw, 66px); line-height: 1.4; }
@@ -512,4 +525,47 @@ body.immersive .finale-footer { display: flex; align-items: center; justify-cont
 }
 @media (prefers-reduced-motion: reduce) {
   .finale-destinations a { transition: none; }
+}
+
+/* Shared glass treatment keeps every province in the same visual family. */
+body.immersive .slide:not(.cinematic) {
+  background: radial-gradient(ellipse at 95% 0%, rgba(63, 128, 178, .14), transparent 55%), radial-gradient(ellipse at 0% 100%, rgba(45, 143, 127, .10), transparent 48%), var(--bg);
+}
+body.immersive .sidebar,
+body.immersive.on-cinematic .sidebar { background: rgba(7, 25, 39, .87); border-color: rgba(190, 226, 241, .24); backdrop-filter: blur(26px) saturate(125%); -webkit-backdrop-filter: blur(26px) saturate(125%); }
+body.immersive .nav-launcher { background: rgba(8, 28, 42, .72); border-color: rgba(190, 226, 241, .3); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+body.immersive .mobile-bar { background: rgba(7, 27, 41, .85); border-color: rgba(190, 226, 241, .18); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+body.immersive .brand-name,
+body.immersive .brand-sub { color: #E8F3F8; }
+body.immersive .button-light { background: #D8EDF4; color: #102D3D; border: 1px solid rgba(237, 250, 255, .5); }
+body.immersive .button-light:hover { background: #EBF8FC; }
+body.immersive .button-outline { border-color: rgba(186, 223, 238, .5); background: rgba(8, 28, 42, .55); }
+body.immersive .chapter-tabs { border-color: rgba(190, 226, 241, .22); background: rgba(13, 37, 51, .7); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); }
+body.immersive .chapter-tabs a[aria-current],
+body.immersive .cinematic .chapter-tabs a[aria-current] { color: #102D3D; background: #B8E3E8; border-color: #B8E3E8; }
+body.immersive .gallery .gallery-selectors,
+body.immersive .food-story,
+body.immersive .ayutthaya .food-story,
+body.immersive .stay-story,
+body.immersive .kanchanaburi .stay-story {
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  border-color: rgba(192, 226, 239, .25);
+  box-shadow: inset 0 1px 0 rgba(226, 246, 253, .07), 0 12px 36px rgba(0, 10, 22, .12);
+  backdrop-filter: blur(24px) saturate(115%);
+  -webkit-backdrop-filter: blur(24px) saturate(115%);
+}
+body.immersive .gallery-selectors button[aria-pressed=true] { background: rgba(173, 220, 230, .13); }
+body.immersive .gallery-selectors button[aria-pressed=true] .place-number,
+body.immersive .gallery-selectors button[aria-pressed=true] .place-name { color: var(--accent); }
+body.immersive .slide-controls button { border-color: rgba(188, 224, 239, .28); background: rgba(8, 27, 41, .5); }
+body.immersive .slide-controls button:hover:not(:disabled) { background: #D8EDF4; color: #102D3D; }
+body.immersive .cinematic .slide-controls { background: rgba(7, 25, 39, .64); }
+body.immersive .finale-destinations { background: rgba(8, 28, 41, .72); border-color: rgba(192, 226, 239, .3); backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px); }
+@media (max-width: 1023px) {
+  body.immersive .gallery-selectors button,
+  body.immersive .gallery-panorama .gallery-selectors button,
+  body.immersive .gallery-overlay .gallery-selectors button,
+  body.immersive .gallery-coast .gallery-selectors button { background: rgba(18, 48, 64, .76); border-color: rgba(192, 226, 239, .22); }
+  body.immersive .gallery-selectors button[aria-pressed=true] { background: rgba(143, 205, 215, .15); border-color: var(--accent); }
+  body.immersive .gallery .gallery-selectors { background: none; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
 }

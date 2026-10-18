@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#263e34">
+  <meta name="theme-color" content="#081E2A">
   <meta name="description" content="หาวันหยุดที่ใช่กับ THAI ESCAPE — 6 ภาค 6 จังหวัด ทั้งที่เที่ยว อาหาร ย่านพัก และไอเดียทริปในแบบของคุณ">
   <title>THAI ESCAPE — Amazing Thailand · 6 ภาค 6 จังหวัด</title>
   <link rel="stylesheet" href="assets/fonts/fonts.css">
-  <link rel="preload" as="image" href="assets/images/kanchanaburi-stay.jpg">
+  <link rel="preload" as="image" href="assets/images/kanchanaburi-stay.webp" imagesrcset="assets/images/kanchanaburi-stay-640.webp 640w, assets/images/kanchanaburi-stay-960.webp 960w, assets/images/kanchanaburi-stay.webp 1600w" imagesizes="(max-width: 1023px) 100vw, 1200px">
   <link rel="stylesheet" href="assets/tailwind.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="interaction.css">
   <link rel="icon" href="assets/thai-mark.svg" type="image/svg+xml">
   <script src="data.js" defer></script>
+  <script src="guides.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="details.js" defer></script>
+  <script src="motion.js" defer></script>
 </head>
 <body class="immersive">
   <a class="skip-link" href="#journey">ข้ามไปยังเนื้อหา</a>
@@ -44,5 +48,12 @@
   <main id="journey" tabindex="-1" aria-label="วันหยุด 6 ภาค 6 จังหวัด"></main>
   <noscript><div class="no-script">กรุณาเปิด JavaScript เพื่อชมทั้ง 6 จังหวัดและแกลเลอรีสถานที่ท่องเที่ยว</div></noscript>
   <p id="live-status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+  <aside id="travel-details" aria-labelledby="travel-title" aria-hidden="true" data-state="closed" inert hidden>
+    <header class="reading-toolbar">
+      <button class="travel-close" type="button" aria-label="ปิดรายละเอียดและกลับไปเที่ยวต่อ"><span aria-hidden="true">←</span><span>กลับไปเที่ยวต่อ</span></button>
+      <span class="reading-toolbar-label">THAI ESCAPE</span>
+    </header>
+    <div id="travel-content"></div>
+  </aside>
 </body>
 </html>

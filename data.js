@@ -1,4 +1,4 @@
-/* Content and image credits from the approved Figma design. */
+/* Content and image metadata for THAI ESCAPE. */
 window.THAILAND_DATA = {
   "provinces": [
     {
@@ -6,7 +6,7 @@ window.THAILAND_DATA = {
       "name": "เชียงใหม่",
       "en": "CHIANG MAI",
       "region": "ภาคเหนือ",
-      "accent": "#719582",
+      "accent": "#9EDACD",
       "overview": "พักใจระหว่างขุนเขาและเมืองล้านนา เดินชมวัดเก่า จิบกาแฟในหมู่บ้านกลางป่า แล้วปิดวันด้วยสำรับอาหารเหนือ",
       "mood": "ล้านนา • ภูเขา • Slow living",
       "tripDays": "3 วัน 2 คืน",
@@ -86,10 +86,10 @@ window.THAILAND_DATA = {
       ],
       "theme": {
         "key": "chiang-mai",
-        "bg": "#F1EEE5",
-        "ink": "#263E34",
-        "accent": "#697956",
-        "muted": "#6C7566",
+        "bg": "#0B2428",
+        "ink": "#EDF7FB",
+        "accent": "#9EDACD",
+        "muted": "#BBD2D5",
         "hook": "ช้าลง แล้วมองให้ไกลขึ้น",
         "short": "เชียงใหม่",
         "layout": "split"
@@ -110,7 +110,7 @@ window.THAILAND_DATA = {
       "name": "บุรีรัมย์",
       "en": "BURIRAM",
       "region": "ภาคอีสาน",
-      "accent": "#546681",
+      "accent": "#A5D4F1",
       "overview": "จากปราสาทหินบนภูเขาไฟ สู่เมืองกีฬาที่เต็มไปด้วยพลัง บุรีรัมย์ชวนให้วันหยุดมีทั้งเรื่องราวเก่าและจังหวะใหม่",
       "mood": "ปราสาทหิน • กีฬา • อีสานใต้",
       "tripDays": "2 วัน 1 คืน",
@@ -190,10 +190,10 @@ window.THAILAND_DATA = {
       ],
       "theme": {
         "key": "buriram",
-        "bg": "#10213B",
-        "ink": "#F3F0E7",
-        "accent": "#FF7847",
-        "muted": "#A9B7CA",
+        "bg": "#0A1D2E",
+        "ink": "#EDF7FB",
+        "accent": "#A5D4F1",
+        "muted": "#BDCFDF",
         "hook": "เมืองที่ปลุกทุกจังหวะให้มีพลัง",
         "short": "บุรีรัมย์",
         "layout": "panorama"
@@ -214,7 +214,7 @@ window.THAILAND_DATA = {
       "name": "พระนครศรีอยุธยา",
       "en": "AYUTTHAYA",
       "region": "ภาคกลาง",
-      "accent": "#AD765E",
+      "accent": "#96D7D3",
       "overview": "ให้วันหยุดเดินช้าลงในเมืองกรุงเก่า ชมมรดกทางสถาปัตยกรรมริมแม่น้ำ สลับกับมื้ออร่อยและคาเฟ่ที่ชวนพัก",
       "mood": "กรุงเก่า • ศิลปะ • ริมแม่น้ำ",
       "tripDays": "2 วัน 1 คืน",
@@ -286,10 +286,10 @@ window.THAILAND_DATA = {
       ],
       "theme": {
         "key": "ayutthaya",
-        "bg": "#E8DECD",
-        "ink": "#342D29",
-        "accent": "#99523A",
-        "muted": "#7F7062",
+        "bg": "#0C252E",
+        "ink": "#EDF7FB",
+        "accent": "#96D7D3",
+        "muted": "#BBD1D8",
         "hook": "หนึ่งวัน ระหว่างอดีตกับวันนี้",
         "short": "อยุธยา",
         "layout": "panorama"
@@ -310,7 +310,7 @@ window.THAILAND_DATA = {
       "name": "จันทบุรี",
       "en": "CHANTHABURI",
       "region": "ภาคตะวันออก",
-      "accent": "#789D92",
+      "accent": "#9CDDD7",
       "overview": "วันหยุดสำหรับคนชอบเดินและชิม สำรวจย่านริมน้ำเก่า ชมอาสนวิหาร แล้วออกไปหาอากาศสดชื่นจากน้ำตกและชายฝั่ง",
       "mood": "เมืองเก่า • อาหารถิ่น • ชายฝั่ง",
       "tripDays": "2 วัน 1 คืน",
@@ -394,10 +394,10 @@ window.THAILAND_DATA = {
       ],
       "theme": {
         "key": "chanthaburi",
-        "bg": "#F2E7C9",
-        "ink": "#503947",
-        "accent": "#AF6854",
-        "muted": "#827169",
+        "bg": "#0B2530",
+        "ink": "#EDF7FB",
+        "accent": "#9CDDD7",
+        "muted": "#BDD3DC",
         "hook": "เดินช้า ๆ ให้เมืองเล่าเรื่อง",
         "short": "จันทบุรี",
         "layout": "split"
@@ -418,7 +418,7 @@ window.THAILAND_DATA = {
       "name": "กาญจนบุรี",
       "en": "KANCHANABURI",
       "region": "ภาคตะวันตก",
-      "accent": "#64816E",
+      "accent": "#9DD9C3",
       "overview": "หลบความเร่งรีบไปอยู่กับสายน้ำและผืนป่า เที่ยวน้ำตกสีเขียว เดินตามรอยประวัติศาสตร์ แล้วพักในค่ำคืนริมแม่น้ำ",
       "mood": "ป่าเขา • สายน้ำ • พักผ่อน",
       "tripDays": "3 วัน 2 คืน",
@@ -502,10 +502,10 @@ window.THAILAND_DATA = {
       ],
       "theme": {
         "key": "kanchanaburi",
-        "bg": "#21392F",
-        "ink": "#F3F0E3",
-        "accent": "#BFCEAA",
-        "muted": "#B8C4B9",
+        "bg": "#092823",
+        "ink": "#EDF7FB",
+        "accent": "#9DD9C3",
+        "muted": "#BCD3CB",
         "hook": "ปล่อยวันหยุด ให้ไหลไปกับสายน้ำ",
         "short": "กาญจนบุรี",
         "layout": "overlay"
@@ -526,7 +526,7 @@ window.THAILAND_DATA = {
       "name": "กระบี่",
       "en": "KRABI",
       "region": "ภาคใต้",
-      "accent": "#4A9C9C",
+      "accent": "#99DCE8",
       "overview": "เปิดวันหยุดให้กว้างเท่าทะเลอันดามัน ล่องเรือผ่านเขาหินปูน ใช้เวลากับชายหาด และชิมอาหารใต้ที่เต็มไปด้วยรสชาติ",
       "mood": "อันดามัน • หาดทราย • เกาะ",
       "tripDays": "3 วัน 2 คืน",
@@ -602,10 +602,10 @@ window.THAILAND_DATA = {
       ],
       "theme": {
         "key": "krabi",
-        "bg": "#DEEFEC",
-        "ink": "#12535E",
-        "accent": "#087D91",
-        "muted": "#678785",
+        "bg": "#092332",
+        "ink": "#EDF7FB",
+        "accent": "#99DCE8",
+        "muted": "#BBD4DF",
         "hook": "พักใจไว้ตรงสีฟ้า",
         "short": "กระบี่",
         "layout": "coast"
@@ -630,9 +630,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Twin_Pagodas_of_Doi_Inthanon.JPG",
       "label": "original-chiang-mai",
-      "src": "assets/images/original-chiang-mai.jpg",
+      "src": "assets/images/original-chiang-mai.webp",
       "width": 1600,
-      "height": 896
+      "height": 896,
+      "responsive": [
+        {
+          "src": "assets/images/original-chiang-mai-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/original-chiang-mai-960.webp",
+          "width": 960
+        }
+      ]
     },
     "original-chanthaburi": {
       "key": "original-chanthaburi",
@@ -641,9 +651,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Chanthabun_Waterfront.jpg",
       "label": "original-chanthaburi",
-      "src": "assets/images/original-chanthaburi.jpg",
+      "src": "assets/images/original-chanthaburi.webp",
       "width": 1280,
-      "height": 847
+      "height": 847,
+      "responsive": [
+        {
+          "src": "assets/images/original-chanthaburi-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/original-chanthaburi-960.webp",
+          "width": 960
+        }
+      ]
     },
     "original-kanchanaburi": {
       "key": "original-kanchanaburi",
@@ -652,9 +672,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Erawan_Waterfall_by_Don_Ramey_Logan.jpg",
       "label": "original-kanchanaburi",
-      "src": "assets/images/original-kanchanaburi.jpg",
+      "src": "assets/images/original-kanchanaburi.webp",
       "width": 1600,
-      "height": 1109
+      "height": 1109,
+      "responsive": [
+        {
+          "src": "assets/images/original-kanchanaburi-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/original-kanchanaburi-960.webp",
+          "width": 960
+        }
+      ]
     },
     "original-buriram": {
       "key": "original-buriram",
@@ -663,9 +693,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Phanomrung.jpg",
       "label": "original-buriram",
-      "src": "assets/images/original-buriram.jpg",
+      "src": "assets/images/original-buriram.webp",
       "width": 1280,
-      "height": 960
+      "height": 960,
+      "responsive": [
+        {
+          "src": "assets/images/original-buriram-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/original-buriram-960.webp",
+          "width": 960
+        }
+      ]
     },
     "original-krabi": {
       "key": "original-krabi",
@@ -674,9 +714,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Railay.jpg",
       "label": "original-krabi",
-      "src": "assets/images/original-krabi.jpg",
+      "src": "assets/images/original-krabi.webp",
       "width": 1280,
-      "height": 960
+      "height": 960,
+      "responsive": [
+        {
+          "src": "assets/images/original-krabi-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/original-krabi-960.webp",
+          "width": 960
+        }
+      ]
     },
     "original-ayutthaya": {
       "key": "original-ayutthaya",
@@ -685,9 +735,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Wat_Chaiwatthanaram.jpg",
       "label": "original-ayutthaya",
-      "src": "assets/images/original-ayutthaya.jpg",
+      "src": "assets/images/original-ayutthaya.webp",
       "width": 1280,
-      "height": 960
+      "height": 960,
+      "responsive": [
+        {
+          "src": "assets/images/original-ayutthaya-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/original-ayutthaya-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chiang-mai-doi-suthep": {
       "key": "chiang-mai-doi-suthep",
@@ -696,9 +756,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Wat_Phra_That_Doi_Suthep_Chaing_Mai.jpg",
       "label": "chiang-mai-doi-suthep",
-      "src": "assets/images/chiang-mai-doi-suthep.jpg",
+      "src": "assets/images/chiang-mai-doi-suthep.webp",
       "width": 1280,
-      "height": 853
+      "height": 853,
+      "responsive": [
+        {
+          "src": "assets/images/chiang-mai-doi-suthep-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chiang-mai-doi-suthep-960.webp",
+          "width": 960
+        }
+      ]
     },
     "buriram-chang-arena": {
       "key": "buriram-chang-arena",
@@ -707,9 +777,15 @@ window.THAILAND_DATA = {
       "license_url": "https://commons.wikimedia.org/wiki/Template:Copyrighted_free_use",
       "source_url": "https://commons.wikimedia.org/wiki/File:Chang_Arena_B.jpg",
       "label": "buriram-chang-arena",
-      "src": "assets/images/buriram-chang-arena.jpg",
+      "src": "assets/images/buriram-chang-arena.webp",
       "width": 912,
-      "height": 430
+      "height": 430,
+      "responsive": [
+        {
+          "src": "assets/images/buriram-chang-arena-640.webp",
+          "width": 640
+        }
+      ]
     },
     "ayutthaya-wat-mahathat": {
       "key": "ayutthaya-wat-mahathat",
@@ -718,9 +794,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Stone_Buddha_covered_in_tree_roots.jpg",
       "label": "ayutthaya-wat-mahathat",
-      "src": "assets/images/ayutthaya-wat-mahathat.jpg",
+      "src": "assets/images/ayutthaya-wat-mahathat.webp",
       "width": 1280,
-      "height": 853
+      "height": 853,
+      "responsive": [
+        {
+          "src": "assets/images/ayutthaya-wat-mahathat-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/ayutthaya-wat-mahathat-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chanthaburi-cathedral": {
       "key": "chanthaburi-cathedral",
@@ -729,9 +815,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Cathedral_of_the_Immaculate_Conception_Chanthaburi.jpg",
       "label": "chanthaburi-cathedral",
-      "src": "assets/images/chanthaburi-cathedral.jpg",
+      "src": "assets/images/chanthaburi-cathedral.webp",
       "width": 1280,
-      "height": 851
+      "height": 851,
+      "responsive": [
+        {
+          "src": "assets/images/chanthaburi-cathedral-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chanthaburi-cathedral-960.webp",
+          "width": 960
+        }
+      ]
     },
     "kanchanaburi-kwai-bridge": {
       "key": "kanchanaburi-kwai-bridge",
@@ -740,9 +836,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Kwai_bridge.jpg",
       "label": "kanchanaburi-kwai-bridge",
-      "src": "assets/images/kanchanaburi-kwai-bridge.jpg",
+      "src": "assets/images/kanchanaburi-kwai-bridge.webp",
       "width": 1280,
-      "height": 853
+      "height": 853,
+      "responsive": [
+        {
+          "src": "assets/images/kanchanaburi-kwai-bridge-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/kanchanaburi-kwai-bridge-960.webp",
+          "width": 960
+        }
+      ]
     },
     "krabi-maya-bay": {
       "key": "krabi-maya-bay",
@@ -751,9 +857,19 @@ window.THAILAND_DATA = {
       "license_url": "https://commons.wikimedia.org/wiki/Template:PD-self",
       "source_url": "https://commons.wikimedia.org/wiki/File:Maya_Bay_Thailand.jpg",
       "label": "krabi-maya-bay",
-      "src": "assets/images/krabi-maya-bay.jpg",
+      "src": "assets/images/krabi-maya-bay.webp",
       "width": 1280,
-      "height": 960
+      "height": 960,
+      "responsive": [
+        {
+          "src": "assets/images/krabi-maya-bay-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/krabi-maya-bay-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chiang-mai-food": {
       "key": "chiang-mai-food",
@@ -762,9 +878,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Khao_soi_Chiang_Mai.jpg",
       "label": "ข้าวซอยไก่",
-      "src": "assets/images/chiang-mai-food.jpg",
+      "src": "assets/images/chiang-mai-food.webp",
       "width": 1600,
-      "height": 1060
+      "height": 1060,
+      "responsive": [
+        {
+          "src": "assets/images/chiang-mai-food-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chiang-mai-food-960.webp",
+          "width": 960
+        }
+      ]
     },
     "buriram-food-alt": {
       "key": "buriram-food-alt",
@@ -773,9 +899,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Grilled_pork_and_beef_balls.jpg",
       "label": "ลูกชิ้นปิ้ง",
-      "src": "assets/images/buriram-food-alt.jpg",
+      "src": "assets/images/buriram-food-alt.webp",
       "width": 1600,
-      "height": 1600
+      "height": 1600,
+      "responsive": [
+        {
+          "src": "assets/images/buriram-food-alt-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/buriram-food-alt-960.webp",
+          "width": 960
+        }
+      ]
     },
     "ayutthaya-food": {
       "key": "ayutthaya-food",
@@ -784,9 +920,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Kung_yang.JPG",
       "label": "กุ้งก้ามกรามเผา",
-      "src": "assets/images/ayutthaya-food.jpg",
+      "src": "assets/images/ayutthaya-food.webp",
       "width": 1600,
-      "height": 1114
+      "height": 1114,
+      "responsive": [
+        {
+          "src": "assets/images/ayutthaya-food-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/ayutthaya-food-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chanthaburi-food": {
       "key": "chanthaburi-food",
@@ -795,9 +941,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%8A%E0%B8%B0%E0%B8%A1%E0%B8%A7%E0%B8%87_(16647636029).jpg",
       "label": "หมูชะมวง",
-      "src": "assets/images/chanthaburi-food.jpg",
+      "src": "assets/images/chanthaburi-food.webp",
       "width": 1600,
-      "height": 1200
+      "height": 1200,
+      "responsive": [
+        {
+          "src": "assets/images/chanthaburi-food-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chanthaburi-food-960.webp",
+          "width": 960
+        }
+      ]
     },
     "kanchanaburi-food": {
       "key": "kanchanaburi-food",
@@ -806,9 +962,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Pla_nin_thot_samun_prai.jpg",
       "label": "ปลานิลทอดสมุนไพร",
-      "src": "assets/images/kanchanaburi-food.jpg",
+      "src": "assets/images/kanchanaburi-food.webp",
       "width": 1600,
-      "height": 1060
+      "height": 1060,
+      "responsive": [
+        {
+          "src": "assets/images/kanchanaburi-food-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/kanchanaburi-food-960.webp",
+          "width": 960
+        }
+      ]
     },
     "krabi-food": {
       "key": "krabi-food",
@@ -817,9 +983,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Kaeng_lueang.JPG",
       "label": "แกงเหลืองปลาใส่หน่อไม้",
-      "src": "assets/images/krabi-food.jpg",
+      "src": "assets/images/krabi-food.webp",
       "width": 1600,
-      "height": 1192
+      "height": 1192,
+      "responsive": [
+        {
+          "src": "assets/images/krabi-food-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/krabi-food-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chiang-mai-mae-kampong": {
       "key": "chiang-mai-mae-kampong",
@@ -828,9 +1004,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B3%E0%B8%9B%E0%B8%AD%E0%B8%87_%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88.jpg",
       "label": "บ้านแม่กำปอง",
-      "src": "assets/images/chiang-mai-mae-kampong.jpg",
+      "src": "assets/images/chiang-mai-mae-kampong.webp",
       "width": 1200,
-      "height": 800
+      "height": 800,
+      "responsive": [
+        {
+          "src": "assets/images/chiang-mai-mae-kampong-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chiang-mai-mae-kampong-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chiang-mai-tha-phae": {
       "key": "chiang-mai-tha-phae",
@@ -839,9 +1025,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Chiang_Mai_sunday_evening_walking_street.jpg",
       "label": "ถนนคนเดินท่าแพ",
-      "src": "assets/images/chiang-mai-tha-phae.jpg",
+      "src": "assets/images/chiang-mai-tha-phae.webp",
       "width": 1280,
-      "height": 569
+      "height": 569,
+      "responsive": [
+        {
+          "src": "assets/images/chiang-mai-tha-phae-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chiang-mai-tha-phae-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chiang-mai-stay": {
       "key": "chiang-mai-stay",
@@ -850,9 +1046,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Rachamankha_Hotel.JPG",
       "label": "บรรยากาศลานพักในเมืองเก่าเชียงใหม่ — Rachamankha",
-      "src": "assets/images/chiang-mai-stay.jpg",
+      "src": "assets/images/chiang-mai-stay.webp",
       "width": 1280,
-      "height": 1050
+      "height": 1050,
+      "responsive": [
+        {
+          "src": "assets/images/chiang-mai-stay-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chiang-mai-stay-960.webp",
+          "width": 960
+        }
+      ]
     },
     "buriram-muang-tam": {
       "key": "buriram-muang-tam",
@@ -861,9 +1067,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Prasat_Muang_Tam.jpg",
       "label": "ปราสาทเมืองต่ำ",
-      "src": "assets/images/buriram-muang-tam.jpg",
+      "src": "assets/images/buriram-muang-tam.webp",
       "width": 1280,
-      "height": 853
+      "height": 853,
+      "responsive": [
+        {
+          "src": "assets/images/buriram-muang-tam-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/buriram-muang-tam-960.webp",
+          "width": 960
+        }
+      ]
     },
     "buriram-khao-kradong": {
       "key": "buriram-khao-kradong",
@@ -872,9 +1088,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%82%E0%B8%94%E0%B8%87_1.JPG",
       "label": "พระพุทธรูปบนยอดเขากระโดง",
-      "src": "assets/images/buriram-khao-kradong.jpg",
+      "src": "assets/images/buriram-khao-kradong.webp",
       "width": 1280,
-      "height": 853
+      "height": 853,
+      "responsive": [
+        {
+          "src": "assets/images/buriram-khao-kradong-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/buriram-khao-kradong-960.webp",
+          "width": 960
+        }
+      ]
     },
     "buriram-stay": {
       "key": "buriram-stay",
@@ -883,9 +1109,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Romburi_Park,_New_Year_2019.jpg",
       "label": "สวนรมย์บุรีและคลองละลมในตัวเมืองบุรีรัมย์ — ภาพบรรยากาศย่านพัก",
-      "src": "assets/images/buriram-stay.jpg",
+      "src": "assets/images/buriram-stay.webp",
       "width": 1280,
-      "height": 960
+      "height": 960,
+      "responsive": [
+        {
+          "src": "assets/images/buriram-stay-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/buriram-stay-960.webp",
+          "width": 960
+        }
+      ]
     },
     "ayutthaya-wat-phra-si-sanphet": {
       "key": "ayutthaya-wat-phra-si-sanphet",
@@ -894,9 +1130,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Wat_Phra_Si_Sanphet_Ayutthaya.jpg",
       "label": "วัดพระศรีสรรเพชญ์",
-      "src": "assets/images/ayutthaya-wat-phra-si-sanphet.jpg",
+      "src": "assets/images/ayutthaya-wat-phra-si-sanphet.webp",
       "width": 1280,
-      "height": 853
+      "height": 853,
+      "responsive": [
+        {
+          "src": "assets/images/ayutthaya-wat-phra-si-sanphet-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/ayutthaya-wat-phra-si-sanphet-960.webp",
+          "width": 960
+        }
+      ]
     },
     "ayutthaya-wat-ratchaburana": {
       "key": "ayutthaya-wat-ratchaburana",
@@ -905,9 +1151,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Prang_and_stupas_of_Wat_Ratchaburana,_Ayutthaya.jpg",
       "label": "วัดราชบูรณะ",
-      "src": "assets/images/ayutthaya-wat-ratchaburana.jpg",
+      "src": "assets/images/ayutthaya-wat-ratchaburana.webp",
       "width": 1280,
-      "height": 960
+      "height": 960,
+      "responsive": [
+        {
+          "src": "assets/images/ayutthaya-wat-ratchaburana-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/ayutthaya-wat-ratchaburana-960.webp",
+          "width": 960
+        }
+      ]
     },
     "ayutthaya-stay": {
       "key": "ayutthaya-stay",
@@ -916,9 +1172,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:River_in_Ayutthaya.jpg",
       "label": "บรรยากาศริมน้ำใกล้สถานีรถไฟอยุธยา — ภาพย่านพัก",
-      "src": "assets/images/ayutthaya-stay.jpg",
+      "src": "assets/images/ayutthaya-stay.webp",
       "width": 1280,
-      "height": 960
+      "height": 960,
+      "responsive": [
+        {
+          "src": "assets/images/ayutthaya-stay-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/ayutthaya-stay-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chanthaburi-phlio": {
       "key": "chanthaburi-phlio",
@@ -927,9 +1193,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Plew_Waterfall_National_Park_01,_Chantaburi,_Thailand.jpg",
       "label": "น้ำตกพลิ้ว",
-      "src": "assets/images/chanthaburi-phlio.jpg",
+      "src": "assets/images/chanthaburi-phlio.webp",
       "width": 1600,
-      "height": 1067
+      "height": 1067,
+      "responsive": [
+        {
+          "src": "assets/images/chanthaburi-phlio-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chanthaburi-phlio-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chanthaburi-noen-nangphaya": {
       "key": "chanthaburi-noen-nangphaya",
@@ -938,9 +1214,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%8D%E0%B8%B2_%E0%B8%88.%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5.jpg",
       "label": "จุดชมวิวเนินนางพญา",
-      "src": "assets/images/chanthaburi-noen-nangphaya.jpg",
+      "src": "assets/images/chanthaburi-noen-nangphaya.webp",
       "width": 1600,
-      "height": 1200
+      "height": 1200,
+      "responsive": [
+        {
+          "src": "assets/images/chanthaburi-noen-nangphaya-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chanthaburi-noen-nangphaya-960.webp",
+          "width": 960
+        }
+      ]
     },
     "chanthaburi-stay": {
       "key": "chanthaburi-stay",
@@ -949,9 +1235,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A7_Chao_Lao_Beach_-_Thailand_-_panoramio.jpg",
       "label": "บรรยากาศหาดเจ้าหลาว · ย่านพักริมทะเล",
-      "src": "assets/images/chanthaburi-stay.jpg",
+      "src": "assets/images/chanthaburi-stay.webp",
       "width": 1600,
-      "height": 1065
+      "height": 1065,
+      "responsive": [
+        {
+          "src": "assets/images/chanthaburi-stay-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/chanthaburi-stay-960.webp",
+          "width": 960
+        }
+      ]
     },
     "kanchanaburi-sai-yok-noi": {
       "key": "kanchanaburi-sai-yok-noi",
@@ -960,9 +1256,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Sai_Yok_Noi_Falls_-_panoramio.jpg",
       "label": "น้ำตกไทรโยคน้อย",
-      "src": "assets/images/kanchanaburi-sai-yok-noi.jpg",
+      "src": "assets/images/kanchanaburi-sai-yok-noi.webp",
       "width": 1600,
-      "height": 1201
+      "height": 1201,
+      "responsive": [
+        {
+          "src": "assets/images/kanchanaburi-sai-yok-noi-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/kanchanaburi-sai-yok-noi-960.webp",
+          "width": 960
+        }
+      ]
     },
     "kanchanaburi-mueang-sing": {
       "key": "kanchanaburi-mueang-sing",
@@ -971,9 +1277,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B4%E0%B8%87%E0%B8%AB%E0%B9%8C_%E0%B8%88.%E0%B8%81%E0%B8%B2%E0%B8%8D%E0%B8%88%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5.jpg",
       "label": "อุทยานประวัติศาสตร์เมืองสิงห์",
-      "src": "assets/images/kanchanaburi-mueang-sing.jpg",
+      "src": "assets/images/kanchanaburi-mueang-sing.webp",
       "width": 1600,
-      "height": 1067
+      "height": 1067,
+      "responsive": [
+        {
+          "src": "assets/images/kanchanaburi-mueang-sing-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/kanchanaburi-mueang-sing-960.webp",
+          "width": 960
+        }
+      ]
     },
     "kanchanaburi-stay": {
       "key": "kanchanaburi-stay",
@@ -982,9 +1298,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:River_Kwai_Hammock_-_Flickr_-_Mark_Fischer.jpg",
       "label": "บรรยากาศแพพักริมแม่น้ำแคว",
-      "src": "assets/images/kanchanaburi-stay.jpg",
+      "src": "assets/images/kanchanaburi-stay.webp",
       "width": 1600,
-      "height": 1063
+      "height": 1063,
+      "responsive": [
+        {
+          "src": "assets/images/kanchanaburi-stay-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/kanchanaburi-stay-960.webp",
+          "width": 960
+        }
+      ]
     },
     "krabi-ko-poda": {
       "key": "krabi-ko-poda",
@@ -993,9 +1319,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Poda_island_beach.jpg",
       "label": "เกาะปอดะ",
-      "src": "assets/images/krabi-ko-poda.jpg",
+      "src": "assets/images/krabi-ko-poda.webp",
       "width": 1600,
-      "height": 1045
+      "height": 1045,
+      "responsive": [
+        {
+          "src": "assets/images/krabi-ko-poda-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/krabi-ko-poda-960.webp",
+          "width": 960
+        }
+      ]
     },
     "krabi-emerald-pool": {
       "key": "krabi-emerald-pool",
@@ -1004,9 +1340,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Emerald_Pool_(Sa_Morakot).jpg",
       "label": "สระมรกต",
-      "src": "assets/images/krabi-emerald-pool.jpg",
+      "src": "assets/images/krabi-emerald-pool.webp",
       "width": 1600,
-      "height": 815
+      "height": 815,
+      "responsive": [
+        {
+          "src": "assets/images/krabi-emerald-pool-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/krabi-emerald-pool-960.webp",
+          "width": 960
+        }
+      ]
     },
     "krabi-ao-nang": {
       "key": "krabi-ao-nang",
@@ -1015,9 +1361,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Ao_Nang_beach.jpg",
       "label": "อ่าวนาง",
-      "src": "assets/images/krabi-ao-nang.jpg",
+      "src": "assets/images/krabi-ao-nang.webp",
       "width": 1600,
-      "height": 1045
+      "height": 1045,
+      "responsive": [
+        {
+          "src": "assets/images/krabi-ao-nang-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/krabi-ao-nang-960.webp",
+          "width": 960
+        }
+      ]
     },
     "krabi-stay": {
       "key": "krabi-stay",
@@ -1026,9 +1382,19 @@ window.THAILAND_DATA = {
       "license_url": "https://creativecommons.org/licenses/by/2.0",
       "source_url": "https://commons.wikimedia.org/wiki/File:Beach_house_Railay_Beach_(21604308453).jpg",
       "label": "บรรยากาศที่พักย่านไร่เลย์",
-      "src": "assets/images/krabi-stay.jpg",
+      "src": "assets/images/krabi-stay.webp",
       "width": 1600,
-      "height": 1600
+      "height": 1600,
+      "responsive": [
+        {
+          "src": "assets/images/krabi-stay-640.webp",
+          "width": 640
+        },
+        {
+          "src": "assets/images/krabi-stay-960.webp",
+          "width": 960
+        }
+      ]
     }
   }
 };
